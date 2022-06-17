@@ -82,24 +82,41 @@
             this.lblDestCpfCnpj = new System.Windows.Forms.Label();
             this.txtDestNomeFantasia = new System.Windows.Forms.TextBox();
             this.lblDestNomeFantasia = new System.Windows.Forms.Label();
-            this.lblArquivoXml = new System.Windows.Forms.Label();
             this.tbItens = new System.Windows.Forms.TabPage();
+            this.lstVwImpostos = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lstVwProdutos = new System.Windows.Forms.ListView();
+            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cEAN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.xProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NCM = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CFOP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.uCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.qCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.vUnCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.vUnTrib = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.vProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.xPed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.infAdProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblArquivoXml = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tbIdentificacao.SuspendLayout();
             this.tbEmitente.SuspendLayout();
             this.gbEnderecoEmitente.SuspendLayout();
             this.tbDestinatario.SuspendLayout();
             this.gbEnderecoDestinatario.SuspendLayout();
+            this.tbItens.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtpathXml
             // 
             this.txtpathXml.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpathXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpathXml.Location = new System.Drawing.Point(55, 30);
+            this.txtpathXml.Location = new System.Drawing.Point(22, 26);
             this.txtpathXml.Name = "txtpathXml";
             this.txtpathXml.ReadOnly = true;
-            this.txtpathXml.Size = new System.Drawing.Size(402, 23);
+            this.txtpathXml.Size = new System.Drawing.Size(694, 23);
             this.txtpathXml.TabIndex = 0;
             // 
             // openFileXml
@@ -112,7 +129,7 @@
             // 
             this.btnLerXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLerXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLerXml.Location = new System.Drawing.Point(463, 30);
+            this.btnLerXml.Location = new System.Drawing.Point(722, 26);
             this.btnLerXml.Name = "btnLerXml";
             this.btnLerXml.Size = new System.Drawing.Size(32, 23);
             this.btnLerXml.TabIndex = 1;
@@ -126,10 +143,10 @@
             this.tabControl1.Controls.Add(this.tbEmitente);
             this.tabControl1.Controls.Add(this.tbDestinatario);
             this.tabControl1.Controls.Add(this.tbItens);
-            this.tabControl1.Location = new System.Drawing.Point(55, 77);
+            this.tabControl1.Location = new System.Drawing.Point(22, 55);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(402, 295);
+            this.tabControl1.Size = new System.Drawing.Size(736, 366);
             this.tabControl1.TabIndex = 2;
             // 
             // tbIdentificacao
@@ -148,7 +165,7 @@
             this.tbIdentificacao.Location = new System.Drawing.Point(4, 22);
             this.tbIdentificacao.Name = "tbIdentificacao";
             this.tbIdentificacao.Padding = new System.Windows.Forms.Padding(3);
-            this.tbIdentificacao.Size = new System.Drawing.Size(394, 269);
+            this.tbIdentificacao.Size = new System.Drawing.Size(728, 340);
             this.tbIdentificacao.TabIndex = 0;
             this.tbIdentificacao.Text = "Identificação";
             this.tbIdentificacao.UseVisualStyleBackColor = true;
@@ -268,7 +285,7 @@
             this.tbEmitente.Location = new System.Drawing.Point(4, 22);
             this.tbEmitente.Name = "tbEmitente";
             this.tbEmitente.Padding = new System.Windows.Forms.Padding(3);
-            this.tbEmitente.Size = new System.Drawing.Size(394, 269);
+            this.tbEmitente.Size = new System.Drawing.Size(728, 340);
             this.tbEmitente.TabIndex = 1;
             this.tbEmitente.Text = "Emitente";
             this.tbEmitente.UseVisualStyleBackColor = true;
@@ -460,7 +477,7 @@
             this.tbDestinatario.Location = new System.Drawing.Point(4, 22);
             this.tbDestinatario.Name = "tbDestinatario";
             this.tbDestinatario.Padding = new System.Windows.Forms.Padding(3);
-            this.tbDestinatario.Size = new System.Drawing.Size(394, 269);
+            this.tbDestinatario.Size = new System.Drawing.Size(728, 340);
             this.tbDestinatario.TabIndex = 2;
             this.tbDestinatario.Text = "Destinatário";
             this.tbDestinatario.UseVisualStyleBackColor = true;
@@ -664,31 +681,138 @@
             this.lblDestNomeFantasia.TabIndex = 4;
             this.lblDestNomeFantasia.Text = "Nome Fantasia";
             // 
-            // lblArquivoXml
-            // 
-            this.lblArquivoXml.AutoSize = true;
-            this.lblArquivoXml.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArquivoXml.Location = new System.Drawing.Point(56, 14);
-            this.lblArquivoXml.Name = "lblArquivoXml";
-            this.lblArquivoXml.Size = new System.Drawing.Size(238, 13);
-            this.lblArquivoXml.TabIndex = 10;
-            this.lblArquivoXml.Text = "Informe o documento eletrônico para leitura";
-            // 
             // tbItens
             // 
+            this.tbItens.Controls.Add(this.lstVwImpostos);
+            this.tbItens.Controls.Add(this.lstVwProdutos);
             this.tbItens.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbItens.Location = new System.Drawing.Point(4, 22);
             this.tbItens.Name = "tbItens";
-            this.tbItens.Size = new System.Drawing.Size(394, 269);
+            this.tbItens.Size = new System.Drawing.Size(728, 340);
             this.tbItens.TabIndex = 3;
             this.tbItens.Text = "Itens";
             this.tbItens.UseVisualStyleBackColor = true;
+            // 
+            // lstVwImpostos
+            // 
+            this.lstVwImpostos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.lstVwImpostos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lstVwImpostos.FullRowSelect = true;
+            this.lstVwImpostos.GridLines = true;
+            this.lstVwImpostos.HideSelection = false;
+            this.lstVwImpostos.Location = new System.Drawing.Point(0, 182);
+            this.lstVwImpostos.MultiSelect = false;
+            this.lstVwImpostos.Name = "lstVwImpostos";
+            this.lstVwImpostos.Size = new System.Drawing.Size(728, 182);
+            this.lstVwImpostos.TabIndex = 2;
+            this.lstVwImpostos.UseCompatibleStateImageBehavior = false;
+            this.lstVwImpostos.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Width = 234;
+            // 
+            // lstVwProdutos
+            // 
+            this.lstVwProdutos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Item,
+            this.cProd,
+            this.cEAN,
+            this.xProd,
+            this.NCM,
+            this.CFOP,
+            this.uCom,
+            this.qCom,
+            this.vUnCom,
+            this.vUnTrib,
+            this.vProd,
+            this.xPed,
+            this.infAdProd});
+            this.lstVwProdutos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lstVwProdutos.FullRowSelect = true;
+            this.lstVwProdutos.GridLines = true;
+            this.lstVwProdutos.HideSelection = false;
+            this.lstVwProdutos.Location = new System.Drawing.Point(0, 0);
+            this.lstVwProdutos.MultiSelect = false;
+            this.lstVwProdutos.Name = "lstVwProdutos";
+            this.lstVwProdutos.Size = new System.Drawing.Size(728, 182);
+            this.lstVwProdutos.TabIndex = 1;
+            this.lstVwProdutos.UseCompatibleStateImageBehavior = false;
+            this.lstVwProdutos.View = System.Windows.Forms.View.Details;
+            // 
+            // Item
+            // 
+            this.Item.Text = "Item";
+            // 
+            // cProd
+            // 
+            this.cProd.Text = "cProd";
+            this.cProd.Width = 95;
+            // 
+            // cEAN
+            // 
+            this.cEAN.Text = "cEAN";
+            this.cEAN.Width = 92;
+            // 
+            // xProd
+            // 
+            this.xProd.Text = "xProd";
+            // 
+            // NCM
+            // 
+            this.NCM.Text = "NCM";
+            // 
+            // CFOP
+            // 
+            this.CFOP.Text = "CFOP";
+            // 
+            // uCom
+            // 
+            this.uCom.Text = "uCom";
+            // 
+            // qCom
+            // 
+            this.qCom.Text = "qCom";
+            // 
+            // vUnCom
+            // 
+            this.vUnCom.Text = "vUnCom";
+            // 
+            // vUnTrib
+            // 
+            this.vUnTrib.Text = "vUnTrib";
+            // 
+            // vProd
+            // 
+            this.vProd.Text = "vProd";
+            // 
+            // xPed
+            // 
+            this.xPed.Text = "xPed";
+            // 
+            // infAdProd
+            // 
+            this.infAdProd.Text = "infAdProd";
+            this.infAdProd.Width = 100;
+            // 
+            // lblArquivoXml
+            // 
+            this.lblArquivoXml.AutoSize = true;
+            this.lblArquivoXml.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblArquivoXml.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArquivoXml.Location = new System.Drawing.Point(0, 0);
+            this.lblArquivoXml.Name = "lblArquivoXml";
+            this.lblArquivoXml.Padding = new System.Windows.Forms.Padding(20, 10, 0, 0);
+            this.lblArquivoXml.Size = new System.Drawing.Size(258, 23);
+            this.lblArquivoXml.TabIndex = 10;
+            this.lblArquivoXml.Text = "Informe o documento eletrônico para leitura";
             // 
             // frmSerializarXml
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 399);
+            this.ClientSize = new System.Drawing.Size(781, 433);
             this.Controls.Add(this.lblArquivoXml);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnLerXml);
@@ -711,6 +835,7 @@
             this.tbDestinatario.PerformLayout();
             this.gbEnderecoDestinatario.ResumeLayout(false);
             this.gbEnderecoDestinatario.PerformLayout();
+            this.tbItens.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -773,6 +898,22 @@
         private System.Windows.Forms.TextBox txtDestCEP;
         private System.Windows.Forms.Label lblDestCEP;
         private System.Windows.Forms.TabPage tbItens;
+        private System.Windows.Forms.ListView lstVwProdutos;
+        private System.Windows.Forms.ColumnHeader cProd;
+        private System.Windows.Forms.ColumnHeader cEAN;
+        private System.Windows.Forms.ColumnHeader xProd;
+        private System.Windows.Forms.ColumnHeader NCM;
+        private System.Windows.Forms.ColumnHeader CFOP;
+        private System.Windows.Forms.ColumnHeader uCom;
+        private System.Windows.Forms.ColumnHeader qCom;
+        private System.Windows.Forms.ColumnHeader vUnCom;
+        private System.Windows.Forms.ColumnHeader Item;
+        private System.Windows.Forms.ColumnHeader vUnTrib;
+        private System.Windows.Forms.ColumnHeader infAdProd;
+        private System.Windows.Forms.ColumnHeader vProd;
+        private System.Windows.Forms.ColumnHeader xPed;
+        private System.Windows.Forms.ListView lstVwImpostos;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 

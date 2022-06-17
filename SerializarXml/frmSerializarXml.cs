@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using SerializarXml.Serializable;
 using SerializarXml.ModelSerialization;
+using System.Globalization;
 
 namespace SerializarXml
 {
@@ -80,6 +81,28 @@ namespace SerializarXml
             txtDestUF.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.UF;
             txtDestCEP.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.CEP;
             txtDestBairro.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.xBairro;
+
+            /* Populando os produtos */
+            int i = 0;
+            
+            foreach (var item in nfe.NotaFiscalEletronica.InformacoesNFe.Detalhe)
+            {
+                i++;
+                ListViewItem oItem = new ListViewItem(item.nItem.ToString());
+                oItem.SubItems.Add(item.Produto.cProd);
+                oItem.SubItems.Add(item.Produto.cEAN);
+                oItem.SubItems.Add(item.Produto.xProd);
+                oItem.SubItems.Add(item.Produto.NCM);
+                oItem.SubItems.Add(item.Produto.CFOP);
+                oItem.SubItems.Add(item.Produto.uCom);
+                oItem.SubItems.Add(item.Produto.qCom.ToString());
+                oItem.SubItems.Add(item.Produto.vUnCom.ToString());
+                oItem.SubItems.Add(item.Produto.vUnTrib.ToString());
+                oItem.SubItems.Add(item.Produto.vProd.ToString());
+                oItem.SubItems.Add(item.Produto.xPed);
+                oItem.SubItems.Add(item.infAdProd2);
+                lstVwProdutos.Items.Add(oItem);
+            }            
         }
     }
 }
