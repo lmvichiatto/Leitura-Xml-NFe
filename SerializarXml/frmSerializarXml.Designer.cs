@@ -83,10 +83,7 @@
             this.txtDestNomeFantasia = new System.Windows.Forms.TextBox();
             this.lblDestNomeFantasia = new System.Windows.Forms.Label();
             this.tbItens = new System.Windows.Forms.TabPage();
-            this.lstVwImpostos = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstVwProdutos = new System.Windows.Forms.ListView();
-            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cEAN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.xProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -95,11 +92,14 @@
             this.uCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.qCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.vUnCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblArquivoXml = new System.Windows.Forms.Label();
+            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.vUnTrib = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.infAdProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.vProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.xPed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.infAdProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblArquivoXml = new System.Windows.Forms.Label();
+            this.lstVwImpostos = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tbIdentificacao.SuspendLayout();
             this.tbEmitente.SuspendLayout();
@@ -165,7 +165,7 @@
             this.tbIdentificacao.Location = new System.Drawing.Point(4, 22);
             this.tbIdentificacao.Name = "tbIdentificacao";
             this.tbIdentificacao.Padding = new System.Windows.Forms.Padding(3);
-            this.tbIdentificacao.Size = new System.Drawing.Size(728, 340);
+            this.tbIdentificacao.Size = new System.Drawing.Size(394, 269);
             this.tbIdentificacao.TabIndex = 0;
             this.tbIdentificacao.Text = "Identificação";
             this.tbIdentificacao.UseVisualStyleBackColor = true;
@@ -285,7 +285,7 @@
             this.tbEmitente.Location = new System.Drawing.Point(4, 22);
             this.tbEmitente.Name = "tbEmitente";
             this.tbEmitente.Padding = new System.Windows.Forms.Padding(3);
-            this.tbEmitente.Size = new System.Drawing.Size(728, 340);
+            this.tbEmitente.Size = new System.Drawing.Size(394, 269);
             this.tbEmitente.TabIndex = 1;
             this.tbEmitente.Text = "Emitente";
             this.tbEmitente.UseVisualStyleBackColor = true;
@@ -477,7 +477,7 @@
             this.tbDestinatario.Location = new System.Drawing.Point(4, 22);
             this.tbDestinatario.Name = "tbDestinatario";
             this.tbDestinatario.Padding = new System.Windows.Forms.Padding(3);
-            this.tbDestinatario.Size = new System.Drawing.Size(728, 340);
+            this.tbDestinatario.Size = new System.Drawing.Size(394, 269);
             this.tbDestinatario.TabIndex = 2;
             this.tbDestinatario.Text = "Destinatário";
             this.tbDestinatario.UseVisualStyleBackColor = true;
@@ -693,26 +693,6 @@
             this.tbItens.Text = "Itens";
             this.tbItens.UseVisualStyleBackColor = true;
             // 
-            // lstVwImpostos
-            // 
-            this.lstVwImpostos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.lstVwImpostos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lstVwImpostos.FullRowSelect = true;
-            this.lstVwImpostos.GridLines = true;
-            this.lstVwImpostos.HideSelection = false;
-            this.lstVwImpostos.Location = new System.Drawing.Point(0, 182);
-            this.lstVwImpostos.MultiSelect = false;
-            this.lstVwImpostos.Name = "lstVwImpostos";
-            this.lstVwImpostos.Size = new System.Drawing.Size(728, 182);
-            this.lstVwImpostos.TabIndex = 2;
-            this.lstVwImpostos.UseCompatibleStateImageBehavior = false;
-            this.lstVwImpostos.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Width = 234;
-            // 
             // lstVwProdutos
             // 
             this.lstVwProdutos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -740,10 +720,6 @@
             this.lstVwProdutos.TabIndex = 1;
             this.lstVwProdutos.UseCompatibleStateImageBehavior = false;
             this.lstVwProdutos.View = System.Windows.Forms.View.Details;
-            // 
-            // Item
-            // 
-            this.Item.Text = "Item";
             // 
             // cProd
             // 
@@ -779,23 +755,6 @@
             // 
             this.vUnCom.Text = "vUnCom";
             // 
-            // vUnTrib
-            // 
-            this.vUnTrib.Text = "vUnTrib";
-            // 
-            // vProd
-            // 
-            this.vProd.Text = "vProd";
-            // 
-            // xPed
-            // 
-            this.xPed.Text = "xPed";
-            // 
-            // infAdProd
-            // 
-            this.infAdProd.Text = "infAdProd";
-            this.infAdProd.Width = 100;
-            // 
             // lblArquivoXml
             // 
             this.lblArquivoXml.AutoSize = true;
@@ -807,6 +766,47 @@
             this.lblArquivoXml.Size = new System.Drawing.Size(258, 23);
             this.lblArquivoXml.TabIndex = 10;
             this.lblArquivoXml.Text = "Informe o documento eletrônico para leitura";
+            // 
+            // Item
+            // 
+            this.Item.Text = "Item";
+            // 
+            // vUnTrib
+            // 
+            this.vUnTrib.Text = "vUnTrib";
+            // 
+            // infAdProd
+            // 
+            this.infAdProd.Text = "infAdProd";
+            this.infAdProd.Width = 100;
+            // 
+            // vProd
+            // 
+            this.vProd.Text = "vProd";
+            // 
+            // xPed
+            // 
+            this.xPed.Text = "xPed";
+            // 
+            // lstVwImpostos
+            // 
+            this.lstVwImpostos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.lstVwImpostos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lstVwImpostos.FullRowSelect = true;
+            this.lstVwImpostos.GridLines = true;
+            this.lstVwImpostos.HideSelection = false;
+            this.lstVwImpostos.Location = new System.Drawing.Point(0, 182);
+            this.lstVwImpostos.MultiSelect = false;
+            this.lstVwImpostos.Name = "lstVwImpostos";
+            this.lstVwImpostos.Size = new System.Drawing.Size(728, 182);
+            this.lstVwImpostos.TabIndex = 2;
+            this.lstVwImpostos.UseCompatibleStateImageBehavior = false;
+            this.lstVwImpostos.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Width = 234;
             // 
             // frmSerializarXml
             // 

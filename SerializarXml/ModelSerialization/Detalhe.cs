@@ -15,8 +15,8 @@ namespace SerializarXml.ModelSerialization
 
         [XmlElement("prod")]
         public Produto Produto { get; set; }
-
-        //[XmlElement("imposto")]
+        
+        ////[XmlElement("imposto")]
         //public Imposto Imposto { get; set; }
 
         
