@@ -55,6 +55,7 @@
     <Compile Include="ModelSerialization\Emitente.cs" />
     <Compile Include="ModelSerialization\Endereco.cs" />
     <Compile Include="ModelSerialization\Identificacao.cs" />
+    <Compile Include="ModelSerialization\InfProcNFe.cs" />
     <Compile Include="ModelSerialization\NFe.cs" />
     <Compile Include="ModelSerialization\NFeProc.cs" />
     <Compile Include="ModelSerialization\Produto.cs" />

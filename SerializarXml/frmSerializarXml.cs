@@ -81,7 +81,9 @@ namespace SerializarXml
             txtDestUF.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.UF;
             txtDestCEP.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.CEP;
             txtDestBairro.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.xBairro;
-
+            txtNFid.Text = nfe.NotaFiscalEletronica.InformacoesNFe.id_nfe;
+            txtChave.Text = nfe.NFeChaveNota.InformacoesNFe.chNFe;
+            lstOutrasInf.Items.Add("-" + nfe.NotaFiscalEletronica.Assinatura.xmlns_signature);
             /* Populando os produtos */
             int i = 0;
             

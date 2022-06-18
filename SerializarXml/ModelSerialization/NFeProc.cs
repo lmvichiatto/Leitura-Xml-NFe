@@ -14,5 +14,10 @@ namespace SerializarXml.ModelSerialization
 
         [XmlElement("NFe", Namespace = "http://www.portalfiscal.inf.br/nfe")]
         public NFe NotaFiscalEletronica { get; set; }
+
+
+        [XmlElement("protNFe", Namespace = "http://www.portalfiscal.inf.br/nfe")]
+        public InfProcNFe NFeChaveNota { get; set; }
+        
     }
 }
