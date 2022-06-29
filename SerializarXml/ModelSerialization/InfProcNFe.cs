@@ -8,17 +8,21 @@ namespace SerializarXml.ModelSerialization
 {
     public class InfProcNFe
     {
-        
+
         [XmlAttribute("versao")]
         public string infVersao { get; set; }
 
         [XmlElement(ElementName = "infProt")]
-        public InfProt InformacoesNFe { get; set; }
+        public InfProtNFe InformacoesNFe { get; set; }
 
-        public class InfProt
+        public class InfProtNFe
         {
             [XmlElement("chNFe")]
             public string chNFe { get; set; }
         }
+
+        [XmlElement(ElementName = "Signature")]
+        public Signature Assinatura {get; set;}
+
     }
 }

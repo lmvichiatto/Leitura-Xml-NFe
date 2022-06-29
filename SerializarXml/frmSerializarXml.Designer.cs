@@ -34,6 +34,13 @@
             this.btnLerXml = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbIdentificacao = new System.Windows.Forms.TabPage();
+            this.txtNovoNrNFe = new System.Windows.Forms.TextBox();
+            this.txtNovaChaveNFe = new System.Windows.Forms.TextBox();
+            this.lstOutrasInf = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNFid = new System.Windows.Forms.TextBox();
+            this.txtChave = new System.Windows.Forms.TextBox();
             this.txtDataEmissao = new System.Windows.Forms.TextBox();
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
@@ -83,8 +90,6 @@
             this.txtDestNomeFantasia = new System.Windows.Forms.TextBox();
             this.lblDestNomeFantasia = new System.Windows.Forms.Label();
             this.tbItens = new System.Windows.Forms.TabPage();
-            this.lstVwImpostos = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstVwProdutos = new System.Windows.Forms.ListView();
             this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -100,11 +105,10 @@
             this.xPed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.infAdProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblArquivoXml = new System.Windows.Forms.Label();
-            this.txtChave = new System.Windows.Forms.TextBox();
-            this.txtNFid = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lstOutrasInf = new System.Windows.Forms.ListBox();
+            this.grb_Atualiza = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tbIdentificacao.SuspendLayout();
             this.tbEmitente.SuspendLayout();
@@ -112,6 +116,7 @@
             this.tbDestinatario.SuspendLayout();
             this.gbEnderecoDestinatario.SuspendLayout();
             this.tbItens.SuspendLayout();
+            this.grb_Atualiza.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtpathXml
@@ -151,11 +156,13 @@
             this.tabControl1.Location = new System.Drawing.Point(22, 55);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(736, 366);
+            this.tabControl1.Size = new System.Drawing.Size(736, 407);
             this.tabControl1.TabIndex = 2;
             // 
             // tbIdentificacao
             // 
+            this.tbIdentificacao.Controls.Add(this.txtNovoNrNFe);
+            this.tbIdentificacao.Controls.Add(this.txtNovaChaveNFe);
             this.tbIdentificacao.Controls.Add(this.lstOutrasInf);
             this.tbIdentificacao.Controls.Add(this.label2);
             this.tbIdentificacao.Controls.Add(this.label1);
@@ -175,10 +182,79 @@
             this.tbIdentificacao.Location = new System.Drawing.Point(4, 22);
             this.tbIdentificacao.Name = "tbIdentificacao";
             this.tbIdentificacao.Padding = new System.Windows.Forms.Padding(3);
-            this.tbIdentificacao.Size = new System.Drawing.Size(728, 340);
+            this.tbIdentificacao.Size = new System.Drawing.Size(728, 381);
             this.tbIdentificacao.TabIndex = 0;
             this.tbIdentificacao.Text = "Identificação";
             this.tbIdentificacao.UseVisualStyleBackColor = true;
+            // 
+            // txtNovoNrNFe
+            // 
+            this.txtNovoNrNFe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNovoNrNFe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNovoNrNFe.Location = new System.Drawing.Point(11, 218);
+            this.txtNovoNrNFe.Name = "txtNovoNrNFe";
+            this.txtNovoNrNFe.ReadOnly = true;
+            this.txtNovoNrNFe.Size = new System.Drawing.Size(103, 23);
+            this.txtNovoNrNFe.TabIndex = 16;
+            // 
+            // txtNovaChaveNFe
+            // 
+            this.txtNovaChaveNFe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNovaChaveNFe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNovaChaveNFe.Location = new System.Drawing.Point(11, 247);
+            this.txtNovaChaveNFe.Name = "txtNovaChaveNFe";
+            this.txtNovaChaveNFe.ReadOnly = true;
+            this.txtNovaChaveNFe.Size = new System.Drawing.Size(370, 23);
+            this.txtNovaChaveNFe.TabIndex = 15;
+            // 
+            // lstOutrasInf
+            // 
+            this.lstOutrasInf.FormattingEnabled = true;
+            this.lstOutrasInf.ItemHeight = 15;
+            this.lstOutrasInf.Location = new System.Drawing.Point(11, 281);
+            this.lstOutrasInf.Name = "lstOutrasInf";
+            this.lstOutrasInf.Size = new System.Drawing.Size(679, 94);
+            this.lstOutrasInf.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 164);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Chave da NF";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Id NFe";
+            // 
+            // txtNFid
+            // 
+            this.txtNFid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNFid.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNFid.Location = new System.Drawing.Point(11, 130);
+            this.txtNFid.Name = "txtNFid";
+            this.txtNFid.ReadOnly = true;
+            this.txtNFid.Size = new System.Drawing.Size(370, 23);
+            this.txtNFid.TabIndex = 11;
+            // 
+            // txtChave
+            // 
+            this.txtChave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtChave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChave.Location = new System.Drawing.Point(11, 180);
+            this.txtChave.Name = "txtChave";
+            this.txtChave.ReadOnly = true;
+            this.txtChave.Size = new System.Drawing.Size(370, 23);
+            this.txtChave.TabIndex = 10;
             // 
             // txtDataEmissao
             // 
@@ -295,7 +371,7 @@
             this.tbEmitente.Location = new System.Drawing.Point(4, 22);
             this.tbEmitente.Name = "tbEmitente";
             this.tbEmitente.Padding = new System.Windows.Forms.Padding(3);
-            this.tbEmitente.Size = new System.Drawing.Size(728, 340);
+            this.tbEmitente.Size = new System.Drawing.Size(728, 381);
             this.tbEmitente.TabIndex = 1;
             this.tbEmitente.Text = "Emitente";
             this.tbEmitente.UseVisualStyleBackColor = true;
@@ -487,7 +563,7 @@
             this.tbDestinatario.Location = new System.Drawing.Point(4, 22);
             this.tbDestinatario.Name = "tbDestinatario";
             this.tbDestinatario.Padding = new System.Windows.Forms.Padding(3);
-            this.tbDestinatario.Size = new System.Drawing.Size(728, 340);
+            this.tbDestinatario.Size = new System.Drawing.Size(728, 381);
             this.tbDestinatario.TabIndex = 2;
             this.tbDestinatario.Text = "Destinatário";
             this.tbDestinatario.UseVisualStyleBackColor = true;
@@ -693,35 +769,15 @@
             // 
             // tbItens
             // 
-            this.tbItens.Controls.Add(this.lstVwImpostos);
+            this.tbItens.Controls.Add(this.grb_Atualiza);
             this.tbItens.Controls.Add(this.lstVwProdutos);
             this.tbItens.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbItens.Location = new System.Drawing.Point(4, 22);
             this.tbItens.Name = "tbItens";
-            this.tbItens.Size = new System.Drawing.Size(728, 340);
+            this.tbItens.Size = new System.Drawing.Size(728, 381);
             this.tbItens.TabIndex = 3;
             this.tbItens.Text = "Itens";
             this.tbItens.UseVisualStyleBackColor = true;
-            // 
-            // lstVwImpostos
-            // 
-            this.lstVwImpostos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.lstVwImpostos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lstVwImpostos.FullRowSelect = true;
-            this.lstVwImpostos.GridLines = true;
-            this.lstVwImpostos.HideSelection = false;
-            this.lstVwImpostos.Location = new System.Drawing.Point(0, 182);
-            this.lstVwImpostos.MultiSelect = false;
-            this.lstVwImpostos.Name = "lstVwImpostos";
-            this.lstVwImpostos.Size = new System.Drawing.Size(728, 182);
-            this.lstVwImpostos.TabIndex = 2;
-            this.lstVwImpostos.UseCompatibleStateImageBehavior = false;
-            this.lstVwImpostos.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Width = 234;
             // 
             // lstVwProdutos
             // 
@@ -818,60 +874,51 @@
             this.lblArquivoXml.TabIndex = 10;
             this.lblArquivoXml.Text = "Informe o documento eletrônico para leitura";
             // 
-            // txtChave
+            // grb_Atualiza
             // 
-            this.txtChave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtChave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChave.Location = new System.Drawing.Point(11, 180);
-            this.txtChave.Name = "txtChave";
-            this.txtChave.ReadOnly = true;
-            this.txtChave.Size = new System.Drawing.Size(370, 23);
-            this.txtChave.TabIndex = 10;
+            this.grb_Atualiza.Controls.Add(this.btnAtualizar);
+            this.grb_Atualiza.Controls.Add(this.label3);
+            this.grb_Atualiza.Controls.Add(this.textBox1);
+            this.grb_Atualiza.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.grb_Atualiza.Location = new System.Drawing.Point(0, 213);
+            this.grb_Atualiza.Name = "grb_Atualiza";
+            this.grb_Atualiza.Size = new System.Drawing.Size(728, 168);
+            this.grb_Atualiza.TabIndex = 2;
+            this.grb_Atualiza.TabStop = false;
+            this.grb_Atualiza.Text = "Atualiza Itens do pedido";
             // 
-            // txtNFid
+            // textBox1
             // 
-            this.txtNFid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNFid.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNFid.Location = new System.Drawing.Point(11, 130);
-            this.txtNFid.Name = "txtNFid";
-            this.txtNFid.ReadOnly = true;
-            this.txtNFid.Size = new System.Drawing.Size(370, 23);
-            this.txtNFid.TabIndex = 11;
+            this.textBox1.Location = new System.Drawing.Point(22, 41);
+            this.textBox1.MaxLength = 9;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 0;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Id NFe";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Novo pedido:";
             // 
-            // label2
+            // btnAtualizar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 164);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Chave da NF";
-            // 
-            // lstOutrasInf
-            // 
-            this.lstOutrasInf.FormattingEnabled = true;
-            this.lstOutrasInf.ItemHeight = 15;
-            this.lstOutrasInf.Location = new System.Drawing.Point(11, 220);
-            this.lstOutrasInf.Name = "lstOutrasInf";
-            this.lstOutrasInf.Size = new System.Drawing.Size(370, 94);
-            this.lstOutrasInf.TabIndex = 14;
+            this.btnAtualizar.Location = new System.Drawing.Point(142, 41);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(65, 21);
+            this.btnAtualizar.TabIndex = 2;
+            this.btnAtualizar.Text = "&Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // frmSerializarXml
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 433);
+            this.ClientSize = new System.Drawing.Size(790, 474);
             this.Controls.Add(this.lblArquivoXml);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnLerXml);
@@ -895,6 +942,8 @@
             this.gbEnderecoDestinatario.ResumeLayout(false);
             this.gbEnderecoDestinatario.PerformLayout();
             this.tbItens.ResumeLayout(false);
+            this.grb_Atualiza.ResumeLayout(false);
+            this.grb_Atualiza.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -971,13 +1020,17 @@
         private System.Windows.Forms.ColumnHeader infAdProd;
         private System.Windows.Forms.ColumnHeader vProd;
         private System.Windows.Forms.ColumnHeader xPed;
-        private System.Windows.Forms.ListView lstVwImpostos;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.TextBox txtChave;
         private System.Windows.Forms.TextBox txtNFid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lstOutrasInf;
+        private System.Windows.Forms.TextBox txtNovoNrNFe;
+        private System.Windows.Forms.TextBox txtNovaChaveNFe;
+        private System.Windows.Forms.GroupBox grb_Atualiza;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

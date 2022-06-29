@@ -59,6 +59,7 @@
     <Compile Include="ModelSerialization\NFe.cs" />
     <Compile Include="ModelSerialization\NFeProc.cs" />
     <Compile Include="ModelSerialization\Produto.cs" />
+    <Compile Include="ModelSerialization\Signature.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializable\NFeSerialization.cs" />

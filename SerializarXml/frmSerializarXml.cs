@@ -10,6 +10,7 @@ using SerializarXml.Serializable;
 using SerializarXml.ModelSerialization;
 using System.Globalization;
 
+
 namespace SerializarXml
 {
     public partial class frmSerializarXml : Form
@@ -44,6 +45,8 @@ namespace SerializarXml
                         popularForm(nfe);
                         MessageBox.Show("Arquivo xml da Nota Fiscal lido com Sucesso!", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
+                    
                 }
             }
             catch (Exception)
@@ -83,10 +86,31 @@ namespace SerializarXml
             txtDestBairro.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.xBairro;
             txtNFid.Text = nfe.NotaFiscalEletronica.InformacoesNFe.id_nfe;
             txtChave.Text = nfe.NFeChaveNota.InformacoesNFe.chNFe;
-            lstOutrasInf.Items.Add("-" + nfe.NotaFiscalEletronica.Assinatura.xmlns_signature);
+            txtNovoNrNFe.Text = (("88" + txtNumero.Text).Length > 9 ? ("88" + txtNumero.Text).Substring(0, 9) : ("88" + txtNumero.Text));
+            txtNovaChaveNFe.Text = GeraNovaChave(txtChave.Text, txtDataEmissao.Text, txtNovoNrNFe.Text, txtSerie.Text);
+            lstOutrasInf.Items.Clear();
+            lstOutrasInf.Items.Add("-> " + nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF);
+            nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF = txtNovoNrNFe.Text;
+            lstOutrasInf.Items.Add("-> " + nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF);
+
+            lstOutrasInf.Items.Add("-> " + nfe.NFeChaveNota.InformacoesNFe.chNFe);
+            nfe.NFeChaveNota.InformacoesNFe.chNFe = txtNovaChaveNFe.Text;
+            lstOutrasInf.Items.Add("-> " + nfe.NFeChaveNota.InformacoesNFe.chNFe);
+
+            string nmArquivoCaminho = openFileXml.FileName;
+            int pos = (nmArquivoCaminho.IndexOf("NFe") == -1 ? nmArquivoCaminho.IndexOf("NFE") : 0);
+            //string nmCaminho = nmArquivoCaminho.Substring(0, nmArquivoCaminho.IndexOf("NFe"));
+            string nmCaminho = nmArquivoCaminho.Substring(0, pos);
+            //string nmArquivo = nmArquivoCaminho.Substring(nmArquivoCaminho.IndexOf("NFe"));
+            string nmArquivo = nmArquivoCaminho.Substring(pos);
+            lstOutrasInf.Items.Add("-> " + nmArquivoCaminho);
+            nmArquivo = nmArquivo.Replace(txtChave.Text, txtNovaChaveNFe.Text);
+            nmArquivoCaminho = nmCaminho + nmArquivo;
+            lstOutrasInf.Items.Add("-> " + nmArquivoCaminho);
             /* Populando os produtos */
             int i = 0;
-            
+
+            lstVwProdutos.Items.Clear();
             foreach (var item in nfe.NotaFiscalEletronica.InformacoesNFe.Detalhe)
             {
                 i++;
@@ -104,7 +128,42 @@ namespace SerializarXml
                 oItem.SubItems.Add(item.Produto.xPed);
                 oItem.SubItems.Add(item.infAdProd2);
                 lstVwProdutos.Items.Add(oItem);
-            }            
+            }
+
+
+
+        }
+
+        private string GeraNovaChave(string chaveAtual, string dataEmiNFe, string nrNovaNFe, string serieNFe)
+        {
+            string novaChave = chaveAtual.Substring(0, 2);
+            novaChave = novaChave + dataEmiNFe.Substring(8, 2);
+            novaChave = novaChave + dataEmiNFe.Substring(3, 2);
+            novaChave = novaChave + chaveAtual.Substring(6,16);
+            novaChave = novaChave + serieNFe.PadLeft(3, '0');
+            novaChave = novaChave + nrNovaNFe.PadLeft(9,'0');
+            novaChave = novaChave + chaveAtual.Substring(34, 9);
+            int soma = 0;
+            int peso = 4;
+            int digito = 0;
+            for (int i = 0; i < novaChave.Length; i++)
+            {
+                soma += int.Parse(novaChave[i].ToString()) * peso;
+                peso = ((peso - 1) == 1 ? 9 : peso-=1);
+                
+            }
+            digito = (((soma % 11) == 1 || (soma % 11) == 0) ? 0 : (11 - (soma % 11)));
+            novaChave = novaChave + digito.ToString();
+            return novaChave;
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            foreach (var item in nfe.NotaFiscalEletronica.InformacoesNFe.Detalhe)
+            {
+
+            }
         }
     }
+
 }
