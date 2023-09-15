@@ -90,6 +90,7 @@
             this.txtDestNomeFantasia = new System.Windows.Forms.TextBox();
             this.lblDestNomeFantasia = new System.Windows.Forms.Label();
             this.tbItens = new System.Windows.Forms.TabPage();
+            this.grb_Atualiza = new System.Windows.Forms.GroupBox();
             this.lstVwProdutos = new System.Windows.Forms.ListView();
             this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -103,12 +104,11 @@
             this.vUnTrib = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.vProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.xPed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nwPed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.infAdProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblArquivoXml = new System.Windows.Forms.Label();
-            this.grb_Atualiza = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.txtNwNrPedido = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tbIdentificacao.SuspendLayout();
             this.tbEmitente.SuspendLayout();
@@ -116,14 +116,13 @@
             this.tbDestinatario.SuspendLayout();
             this.gbEnderecoDestinatario.SuspendLayout();
             this.tbItens.SuspendLayout();
-            this.grb_Atualiza.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtpathXml
             // 
             this.txtpathXml.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpathXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpathXml.Location = new System.Drawing.Point(22, 26);
+            this.txtpathXml.Location = new System.Drawing.Point(22, 90);
             this.txtpathXml.Name = "txtpathXml";
             this.txtpathXml.ReadOnly = true;
             this.txtpathXml.Size = new System.Drawing.Size(694, 23);
@@ -139,7 +138,7 @@
             // 
             this.btnLerXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLerXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLerXml.Location = new System.Drawing.Point(722, 26);
+            this.btnLerXml.Location = new System.Drawing.Point(722, 90);
             this.btnLerXml.Name = "btnLerXml";
             this.btnLerXml.Size = new System.Drawing.Size(32, 23);
             this.btnLerXml.TabIndex = 1;
@@ -153,7 +152,7 @@
             this.tabControl1.Controls.Add(this.tbEmitente);
             this.tabControl1.Controls.Add(this.tbDestinatario);
             this.tabControl1.Controls.Add(this.tbItens);
-            this.tabControl1.Location = new System.Drawing.Point(22, 55);
+            this.tabControl1.Location = new System.Drawing.Point(22, 117);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(736, 407);
@@ -779,6 +778,16 @@
             this.tbItens.Text = "Itens";
             this.tbItens.UseVisualStyleBackColor = true;
             // 
+            // grb_Atualiza
+            // 
+            this.grb_Atualiza.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.grb_Atualiza.Location = new System.Drawing.Point(0, 213);
+            this.grb_Atualiza.Name = "grb_Atualiza";
+            this.grb_Atualiza.Size = new System.Drawing.Size(728, 168);
+            this.grb_Atualiza.TabIndex = 2;
+            this.grb_Atualiza.TabStop = false;
+            this.grb_Atualiza.Text = "Atualiza Itens do pedido";
+            // 
             // lstVwProdutos
             // 
             this.lstVwProdutos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -794,6 +803,7 @@
             this.vUnTrib,
             this.vProd,
             this.xPed,
+            this.nwPed,
             this.infAdProd});
             this.lstVwProdutos.Dock = System.Windows.Forms.DockStyle.Top;
             this.lstVwProdutos.FullRowSelect = true;
@@ -865,60 +875,39 @@
             // lblArquivoXml
             // 
             this.lblArquivoXml.AutoSize = true;
-            this.lblArquivoXml.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblArquivoXml.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArquivoXml.Location = new System.Drawing.Point(0, 0);
+            this.lblArquivoXml.Location = new System.Drawing.Point(19, 74);
+            this.lblArquivoXml.Margin = new System.Windows.Forms.Padding(0);
             this.lblArquivoXml.Name = "lblArquivoXml";
-            this.lblArquivoXml.Padding = new System.Windows.Forms.Padding(20, 10, 0, 0);
-            this.lblArquivoXml.Size = new System.Drawing.Size(258, 23);
+            this.lblArquivoXml.Size = new System.Drawing.Size(238, 13);
             this.lblArquivoXml.TabIndex = 10;
             this.lblArquivoXml.Text = "Informe o documento eletrônico para leitura";
-            // 
-            // grb_Atualiza
-            // 
-            this.grb_Atualiza.Controls.Add(this.btnAtualizar);
-            this.grb_Atualiza.Controls.Add(this.label3);
-            this.grb_Atualiza.Controls.Add(this.textBox1);
-            this.grb_Atualiza.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grb_Atualiza.Location = new System.Drawing.Point(0, 213);
-            this.grb_Atualiza.Name = "grb_Atualiza";
-            this.grb_Atualiza.Size = new System.Drawing.Size(728, 168);
-            this.grb_Atualiza.TabIndex = 2;
-            this.grb_Atualiza.TabStop = false;
-            this.grb_Atualiza.Text = "Atualiza Itens do pedido";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(22, 41);
-            this.textBox1.MaxLength = 9;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 18);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 1;
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 12;
             this.label3.Text = "Novo pedido:";
             // 
-            // btnAtualizar
+            // txtNwNrPedido
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(142, 41);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(65, 21);
-            this.btnAtualizar.TabIndex = 2;
-            this.btnAtualizar.Text = "&Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            this.txtNwNrPedido.Location = new System.Drawing.Point(22, 41);
+            this.txtNwNrPedido.MaxLength = 15;
+            this.txtNwNrPedido.Name = "txtNwNrPedido";
+            this.txtNwNrPedido.Size = new System.Drawing.Size(148, 20);
+            this.txtNwNrPedido.TabIndex = 11;
             // 
             // frmSerializarXml
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 474);
+            this.ClientSize = new System.Drawing.Size(790, 531);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtNwNrPedido);
             this.Controls.Add(this.lblArquivoXml);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnLerXml);
@@ -942,8 +931,6 @@
             this.gbEnderecoDestinatario.ResumeLayout(false);
             this.gbEnderecoDestinatario.PerformLayout();
             this.tbItens.ResumeLayout(false);
-            this.grb_Atualiza.ResumeLayout(false);
-            this.grb_Atualiza.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1028,9 +1015,9 @@
         private System.Windows.Forms.TextBox txtNovoNrNFe;
         private System.Windows.Forms.TextBox txtNovaChaveNFe;
         private System.Windows.Forms.GroupBox grb_Atualiza;
-        private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNwNrPedido;
+        private System.Windows.Forms.ColumnHeader nwPed;
     }
 }
 

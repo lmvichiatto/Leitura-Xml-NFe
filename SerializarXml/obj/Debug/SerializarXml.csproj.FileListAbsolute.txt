@@ -14,3 +14,12 @@ C:\Users\Felipe\Fontes\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.csp
 C:\Users\Felipe\Fontes\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.frmSerializarXml.resources
 C:\Users\Felipe\Fontes\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.Properties.Resources.resources
 C:\Users\Felipe\Fontes\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.csproj.GenerateResource.Cache
+C:\Users\marcelo\source\repos\lmvichiatto\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.csprojAssemblyReference.cache
+C:\Users\marcelo\source\repos\lmvichiatto\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.frmSerializarXml.resources
+C:\Users\marcelo\source\repos\lmvichiatto\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.Properties.Resources.resources
+C:\Users\marcelo\source\repos\lmvichiatto\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.csproj.GenerateResource.cache
+C:\Users\marcelo\source\repos\lmvichiatto\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.csproj.CoreCompileInputs.cache
+C:\Users\marcelo\source\repos\lmvichiatto\Leitura-Xml-NFe\SerializarXml\bin\Debug\SerializarXml.exe
+C:\Users\marcelo\source\repos\lmvichiatto\Leitura-Xml-NFe\SerializarXml\bin\Debug\SerializarXml.pdb
+C:\Users\marcelo\source\repos\lmvichiatto\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.exe
+C:\Users\marcelo\source\repos\lmvichiatto\Leitura-Xml-NFe\SerializarXml\obj\Debug\SerializarXml.pdb

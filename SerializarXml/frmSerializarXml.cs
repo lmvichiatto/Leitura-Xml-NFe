@@ -19,21 +19,27 @@ namespace SerializarXml
         {
             InitializeComponent();
         }
+        string nwNrPedido, oldNrPedido;
+        NFeSerialization serializable = new NFeSerialization();
+        
+        
 
         private void btnLerXml_Click(object sender, EventArgs e)
         {
             LerXml();
         }
 
+
         private void LerXml()
         {
+            nwNrPedido = txtNwNrPedido.Text;
             try
             {
                 if (openFileXml.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     txtpathXml.Text = openFileXml.FileName;
 
-                    NFeSerialization serializable = new NFeSerialization();
+                    //NFeSerialization serializable = new NFeSerialization();
                     var nfe = serializable.GetObjectFromFile<NFeProc>(txtpathXml.Text);
 
                     if (nfe == null)
@@ -125,7 +131,13 @@ namespace SerializarXml
                 oItem.SubItems.Add(item.Produto.vUnCom.ToString());
                 oItem.SubItems.Add(item.Produto.vUnTrib.ToString());
                 oItem.SubItems.Add(item.Produto.vProd.ToString());
+                if (nwNrPedido.Trim().Length > 0)
+                {
+                    oldNrPedido = item.Produto.xPed;
+                    item.Produto.xPed = nwNrPedido.ToString();
+                }
                 oItem.SubItems.Add(item.Produto.xPed);
+                oItem.SubItems.Add(oldNrPedido);
                 oItem.SubItems.Add(item.infAdProd2);
                 lstVwProdutos.Items.Add(oItem);
             }
@@ -155,14 +167,12 @@ namespace SerializarXml
             digito = (((soma % 11) == 1 || (soma % 11) == 0) ? 0 : (11 - (soma % 11)));
             novaChave = novaChave + digito.ToString();
             return novaChave;
+
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            foreach (var item in nfe.NotaFiscalEletronica.InformacoesNFe.Detalhe)
-            {
-
-            }
+            
         }
     }
 
